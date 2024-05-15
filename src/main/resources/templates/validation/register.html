@@ -12,17 +12,17 @@
     <form th:action="@{/register/save}" th:object="${user}" method="post">
         <div class="user-box">
             <input type="text" name="email" id="email" th:field="*{email}" required pattern="^[a-zA-Z0-9.]+[@][a-zA-Z0-9]+[.][a-zA-Z]{1,8}$" title="Podaj adres email w formacie abcd@efgh.ijk">
-            <label>Email Address</label>
+            <label>Adres e-mail</label>
             <p th:errors = "*{email}" class="text-danger" th:if="${#fields.hasErrors('email')}"></p>
         </div>
         <div class="user-box">
             <input type="password" name="password" id="password" th:field="*{password}" required >
-            <label>Password</label>
+            <label>Hasło</label>
             <p th:errors = "*{password}" class="text-danger" th:if="${#fields.hasErrors('password')}"></p>
         </div>
         <input type="submit" value="register">
         <div class="user-login">
-            <a th:href="@{/login}">Sign in to your account</a>
+            <a th:href="@{/login}">Zaloguj się do swojego konta</a>
         </div>
     </form>
 </div>
