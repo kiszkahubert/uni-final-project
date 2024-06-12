@@ -1,14 +1,14 @@
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:XE
-    username: localadmin
+    url: jdbc:mysql://google/restaurantdb?cloudSqlInstance=uni-final-project-422814:europe-central2:restaurant-app-db&socketFactory=com.google.cloud.sql.mysql.SocketFactory
+    username: root
     password: localadmin
-    driver-class-name: oracle.jdbc.OracleDriver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   mail:
     host: smtp.gmail.com
     port: 587
-    password: ${SMTP_PASSWD}
-    username: ${SMTP_EMAIL}
+    password: "jzek gemm dyyi lgpt"
+    username: "hubert.kiszkavp@gmail.com"
     properties:
       mail:
         smtp:
@@ -17,10 +17,12 @@ spring:
           auth: true
   jpa:
     show-sql: false
+    hibernate:
+      ddl-auto: update
   security:
     oauth2:
       client:
         registration:
           github:
-            client-id: ${client-id}
-            client-secret: ${client-secret}
+            client-id: "75e735f2ea1cc9cd1d1b"
+            client-secret: "24b2e3cbee64776974c3bb8a7f31498beef1bae1"

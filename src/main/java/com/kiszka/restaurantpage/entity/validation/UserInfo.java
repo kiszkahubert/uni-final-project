@@ -11,8 +11,7 @@ import java.util.List;
 @Table(name = "usercredentials")
 public class UserInfo {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "seq_id_user")
-    @SequenceGenerator(name = "seq_id_user",sequenceName = "seq_id_user",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "userkey")
     private int id;
     @Column(name = "email")

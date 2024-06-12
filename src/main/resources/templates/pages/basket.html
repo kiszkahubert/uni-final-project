@@ -4,8 +4,8 @@
     <title>Basket</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
-    <meta name="_csrf" th:content="${_csrf.token}"/>
-    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <meta name="_csrf" th:content="${_csrf.token}">
+    <meta name="_csrf_header" th:content="${_csrf.headerName}">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,7 +116,7 @@
             let csrfHeader = document.querySelector('meta[name="_csrf_header"]').getAttribute('content');
             let orderKeys = Object.keys(localStorage).filter(key => key.startsWith('order'))
             let orders = orderKeys.map(key => JSON.parse(localStorage.getItem(key)))
-            fetch('http://localhost:8080/api/orders',{
+            fetch('https://uni-final-project-422814.lm.r.appspot.com/api/orders',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
