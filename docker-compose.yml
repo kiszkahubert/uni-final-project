@@ -18,7 +18,7 @@ services:
     depends_on:
       - web_app_db
     networks:
-      - webapp_net
+      - webapp_net\
 
 networks:
   webapp_net:
